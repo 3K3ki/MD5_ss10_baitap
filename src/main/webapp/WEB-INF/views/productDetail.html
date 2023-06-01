@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="grid" id="listComic" style="display: flex;flex-wrap: wrap;padding: 10px">
+        <div class="grid_item">
+            <div class="book-avarta">
+                <a href="detail/${product.id}" >
+                    <img src="https://img1.kienthucvui.vn/uploads/2019/10/09/anh-dep-lam-nen-may-tinh-bong-hoa-huong-duong-ruc-ro_042950694.jpg"
+                         style="width: 10%" >
+                </a>
+            </div>
+            <div class="book-info" style="margin-top: 10px">
+                <div class="book-name">
+                    <a title="manga" th:text="${product.name}"></a>
+                </div>
+                <div class="book-name">
+                    <a title="manga" th:text="${product.price}"></a>
+                </div>
+                <div class="book-name">
+                    <a th:href="@{/add/__${product.id}__(action='list')}">AddtoCart</a>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
